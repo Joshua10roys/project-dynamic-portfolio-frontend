@@ -1,0 +1,44 @@
+{
+    "personalDetails": {
+        "firstname": "Joshua",
+        "middlename": "Ashvinth",
+        "lastname": "Roys"
+    },
+    "education": {
+        "education1": {}
+    },
+    "about": {
+        "title": "Hey there! I am Joshua",
+        "passage": ""
+    },
+    "skills": [
+        {}
+    ],
+    "workExperiance": [
+        {
+            "position": "GET",
+            "yearsOfExperiance": "1 year"
+        }
+    ],
+    "projects": [
+        {
+            "name": "",
+            "description": "",
+            "url": ""
+        }
+    ],
+    "profiles": [
+        {
+            "name": "LinkedIn",
+            "url": ""
+        },
+        {
+            "name": "Facebook",
+            "url": ""
+        },
+        {
+            "name": "GitHub",
+            "url": ""
+        }
+    ]
+}

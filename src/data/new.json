@@ -1,0 +1,42 @@
+{
+    "home": {
+        "title": "",
+        "description": ""
+    },
+    "about": {
+        "vsibility": "true",
+        "title": "Hey there! I am Joshua",
+        "passage": ""
+    },
+    "education": {
+        "education1": {}
+    },
+    "skills": [
+        {}
+    ],
+    "experiance": [
+        {
+            "position": "GET",
+            "yearsOfExperiance": "1 year"
+        }
+    ],
+    "contact": {
+        "email": "",
+        "mobile": "",
+        "address": ""
+    },
+    "profiles": [
+        {
+            "name": "LinkedIn",
+            "url": ""
+        },
+        {
+            "name": "Facebook",
+            "url": ""
+        },
+        {
+            "name": "GitHub",
+            "url": ""
+        }
+    ]
+}

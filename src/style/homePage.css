@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --font: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(185, 186, 192);
+}
+
+.fadeInAnimation {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------ navbar ------ */
+
+.loginbtn {
+    height: 30px;
+    padding: 0 5px;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+/* ------ home ------ */
+
+.bg-img {
+    background: url(../assets/bg1.jpg) center no-repeat;
+    max-width: 1920px;
+    background-size: cover;
+}
+
+.homeText {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 1920px;
+    height: 100vh;
+    max-height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ------ about ------ */
+
+#about {
+    max-width: 1920px;
+    background-color: rgb(255, 255, 255);
+}
+
+.about {
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+.aboutContect {
+    max-width: 1000px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+/* ------ education ------ */
+
+#education {
+    max-width: 1920px;
+    min-height: 450px;
+    background-color: rgb(227, 212, 173);
+}
+
+#education h1 {
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+/* ------ skills ------ */
+
+#skills {
+    max-width: 1920px;
+    background-color: rgb(255, 255, 255);
+}
+
+#skills h1 {
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+/* ------ experiance ------ */
+
+#experiance {
+    max-height: 1080px;
+    max-width: 1920px;
+    background-color: rgb(255, 228, 228);
+}
+
+/* ------ contact me ------ */
+
+#contactMe {
+    max-height: 1080px;
+    max-width: 1920px;
+    background-color: rgb(255, 255, 255);
+}
+
+.font {
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+/* ------ footer ------ */
+
+#footer {
+    max-width: 1920px;
+    background-color: rgb(19, 43, 63);
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ------ print style ------ */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    #navbar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .bg-img {
+        min-height: 100vh;
+    }
+
+    .homeText {
+        min-height: 100vh;
+    }
+
+    #about {
+        height: 100vh;
+    }
+
+    #education {
+        height: 100vh;
+    }
+
+    #skills {
+        height: 100vh;
+    }
+
+    #chart {
+        max-width: 80vw;
+    }
+
+    #experiance {
+        height: 100vh;
+    }
+
+    #contactMe {
+        height: 100vh;
+    }
+}

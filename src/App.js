@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import { Routes, Route } from 'react-router-dom';
+import axios from "axios";
 
-function App() {
+import { about } from "./data/data.js";
+import { education } from "./data/data.js";
+import { skill } from "./data/data.js";
+import { experiance } from "./data/data.js";
+
+import HomePage from "./pages/portfolio.js";
+import AdminPage from "./pages/adminPage.js";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style/homePage.css'
+
+
+export default function App() {
+
+  const [details, setDetails] = useState(null);
+  const [login, setLogin] = useState(false);
+
+  const data = [about, education, skill, experiance];
+
+  setTimeout(() => {
+    setDetails("")
+  }, 1500);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+    <Routes >
+
+      <Route path="/" element={<HomePage details={details} login={login} data={data} />} />
+      <Route path="/admin" element={<AdminPage details={details} login={login} />} />
+
+    </Routes>
+
+  )
+}
