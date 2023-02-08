@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
-import axios from "axios";
 
 import { about } from "./data/data.js";
 import { education } from "./data/data.js";

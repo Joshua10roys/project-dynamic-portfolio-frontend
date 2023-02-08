@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap"
 
-export default function Footer({ login, printOnClick }) {
+export default function Footer({ login, printOnClick, show, setShow }) {
 
     return (
         <>
@@ -9,7 +9,7 @@ export default function Footer({ login, printOnClick }) {
                 <div className="d-md-flex justify-content-around align-items-center text-center">
 
                     <div className="pt-3">
-                        <p> <a href="#home" className="h6">Home</a></p>
+                        <p><a href="#home" className="h6">Home</a></p>
                         <p><a href="#about" className="h6">About</a></p>
                         <p><a href="#education" className="h6">Education</a></p>
                         <p><a href="#skills" className="h6">Skills</a></p>
@@ -18,13 +18,13 @@ export default function Footer({ login, printOnClick }) {
                     <div className="pt-md-3">
                         <p><a href="#experiance" className="h6">Experiance</a></p>
                         <p><a href="#contactMe" className="h6">Contact Me</a></p>
-                        <p><a onClick={printOnClick} className="h6">Print</a></p>
+                        <p><a type="button" onClick={printOnClick} className="h6 m-0">Print</a></p>
                         {
                             login
                                 ?
-                                <p><a className="h6">Logout</a></p>
+                                <p><a className="h6 m-0">Logout</a></p>
                                 :
-                                <p><a className="h6">Login</a></p>
+                                <p><a type="button" className="h6 m-0" onClick={() => setShow(!show)}>Login</a></p>
                         }
                     </div>
 

@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-export default function Navbar_({ login, printOnClick }) {
+export default function Navbar_({ login, printOnClick, show, setShow }) {
 
     return (
         <>
@@ -31,10 +31,12 @@ export default function Navbar_({ login, printOnClick }) {
                                         ?
                                         <>
                                             <Button variant="success" className="fw-bold loginbtn">Admin</Button>
-                                            <Button variant="danger" className="fw-bold loginbtn">Logout</Button>
+                                            <Button variant="danger" className="fw-bold loginbtn"
+                                            >Logout</Button>
                                         </>
                                         :
-                                        <Button variant="primary" className="fw-bold loginbtn">Login</Button>
+                                        <Button variant="primary" className="fw-bold loginbtn"
+                                            onClick={() => setShow(!show)}>Login</Button>
                                 }
                             </Nav>
 

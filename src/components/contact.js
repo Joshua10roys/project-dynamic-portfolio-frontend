@@ -2,7 +2,6 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 
 
-
 export default function ContactMe() {
 
     const formik = useFormik({
@@ -32,12 +31,6 @@ export default function ContactMe() {
 
                         <div className="col-12 col-md-4 my-md-4 mx-auto">
 
-                            <i className="bi bi-envelope-fill" style={{ fontSize: "23px" }}></i>
-                            <p className="d-inline-block fs-5 ps-3"> samplemail@gmail.com</p><br />
-
-                            <i className="bi bi-geo-alt-fill" style={{ fontSize: "23px" }}></i>
-                            <p className="d-inline-block fs-5 ps-3"> Chennai, Tamil Nadu, India</p><br />
-
                             <i className="bi bi-github" style={{ fontSize: "23px" }}></i>
                             <p className="d-inline-block fs-5 ps-3">
                                 <a target="_blank" className="text-dark" href="https://github.com/login">
@@ -58,7 +51,17 @@ export default function ContactMe() {
                                 <a target="_blank" className="text-dark" href="https://twitter.com/">
                                     Twitter
                                 </a>
-                            </p>
+                            </p><br />
+
+                            <i className="bi bi-envelope-fill" style={{ fontSize: "23px" }}></i>
+                            <p className="d-inline-block fs-5 ps-3">
+                                samplemail@gmail.com
+                            </p><br />
+
+                            <i className="bi bi-geo-alt-fill" style={{ fontSize: "23px" }}></i>
+                            <p className="d-inline-block fs-5 ps-3">
+                                Chennai, Tamil Nadu, India
+                            </p><br />
 
                         </div>
 

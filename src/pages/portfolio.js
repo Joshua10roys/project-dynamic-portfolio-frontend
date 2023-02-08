@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useReactToPrint } from 'react-to-print';
 
 import Spinner_ from "../components/spinner.js";
@@ -10,11 +10,14 @@ import Skill from "../components/skills.js";
 import Experiance from "../components/experiance.js";
 import ContactMe from "../components/contact.js";
 import Footer from "../components/footer.js";
+import Lonin from "../components/login.js";
 
 
 export default function HomePage({ details, login, data }) {
 
-    // console.log(data[1]);
+    // model
+    const [show, setShow] = useState(false);
+    // react to print
     const componentref = useRef();
     const printOnClick = useReactToPrint({
         content: () => componentref.current,
@@ -30,34 +33,38 @@ export default function HomePage({ details, login, data }) {
                 <Spinner_ />
 
                 :
+                <>
 
-                <div ref={componentref} className="fadeInAnimation">
+                    <Lonin show={show} setShow={setShow} />
 
-                    {/* navbar */}
-                    <Navbar_ login={login} printOnClick={printOnClick} />
+                    <div ref={componentref} className="fadeInAnimation">
 
-                    {/* home */}
-                    <Home />
+                        {/* navbar */}
+                        <Navbar_ login={login} printOnClick={printOnClick} show={show} setShow={setShow} />
 
-                    {/* about */}
-                    <About data={data[0][0].about} />
+                        {/* home */}
+                        <Home />
 
-                    {/* education */}
-                    <Education data={data[1]} />
+                        {/* about */}
+                        <About data={data[0][0].about} />
 
-                    {/* skills */}
-                    <Skill data={data[2]} />
+                        {/* education */}
+                        <Education data={data[1]} />
 
-                    {/* experiance */}
-                    <Experiance data={data[3]} />
+                        {/* skills */}
+                        <Skill data={data[2]} />
 
-                    {/* Contact Me */}
-                    <ContactMe />
+                        {/* experiance */}
+                        <Experiance data={data[3]} />
 
-                    {/* footer */}
-                    <Footer login={login} printOnClick={printOnClick} />
+                        {/* Contact Me */}
+                        <ContactMe />
 
-                </div>
+                        {/* footer */}
+                        <Footer login={login} printOnClick={printOnClick} show={show} setShow={setShow} />
+
+                    </div>
+                </>
             }
         </>
     )
