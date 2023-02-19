@@ -1,13 +1,27 @@
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS, layouts, scales } from "chart.js/auto";
+import { Chart as ChartJS, layouts, plugins, scales } from "chart.js/auto";
+
 
 export default function Skill({ data }) {
 
-    return (
+    let lables = [];
+    let datas = [];
+    let colors = [];
 
+    data.map(e => {
+        if (e.enabled) {
+            lables.push(e.name);
+            datas.push(e.value);
+            colors.push(e.color);
+        }
+    })
+
+    return (
         <>
             <div id="skills" className="m-0 p-3 p-md-5 mx-auto">
+
                 <div className="container">
+
                     <h1 className="text-center">Skill</h1>
                     <hr />
 
@@ -15,12 +29,11 @@ export default function Skill({ data }) {
                         <Bar
                             id="chart"
                             data={{
-                                labels: data.map(item => item.name),
+                                labels: lables,
                                 datasets: [{
-                                    // label: none,
-                                    data: data.map(item => item.value),
-                                    backgroundColor: data.map(item => item.color),
-                                    color: "#000000",
+                                    data: datas,
+                                    backgroundColor: colors,
+                                    color: "#000000"
                                 }],
                             }}
                             options={{
@@ -50,8 +63,8 @@ export default function Skill({ data }) {
                     </div>
 
                 </div>
-            </div>
 
+            </div>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { about } from "../data/data"
+
 
 export default function About({ data }) {
 
@@ -11,7 +11,7 @@ export default function About({ data }) {
                     <h1 className="mb-3 mb-md-4 about">About</h1>
                     <hr />
                     <p className="my-3 my-md-4 mx-auto h4 fw-normal lh-lg aboutContect">
-                        {data}
+                        {data[0].aboutContent}
                     </p>
 
                 </div>

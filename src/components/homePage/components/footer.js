@@ -1,6 +1,6 @@
-import { Button } from "react-bootstrap"
 
-export default function Footer({ login, printOnClick, show, setShow }) {
+
+export default function Footer({ login, printOnClick, show, setShow, logout }) {
 
     return (
         <>
@@ -22,7 +22,7 @@ export default function Footer({ login, printOnClick, show, setShow }) {
                         {
                             login
                                 ?
-                                <p><a className="h6 m-0">Logout</a></p>
+                                <p><a type="button" className="h6 m-0" onClick={logout}>Logout</a></p>
                                 :
                                 <p><a type="button" className="h6 m-0" onClick={() => setShow(!show)}>Login</a></p>
                         }

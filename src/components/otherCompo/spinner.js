@@ -1,6 +1,6 @@
 import { Container, Spinner } from "react-bootstrap";
 
-export default function Spinner_() {
+export default function Spinner1() {
 
     return (
         <Container fluid className="vh-100 d-flex justify-content-center align-items-center bg-dark text-white">

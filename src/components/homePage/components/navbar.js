@@ -1,9 +1,14 @@
-import { Button, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-export default function Navbar_({ login, printOnClick, show, setShow }) {
+
+export default function Navbar1({ login, printOnClick, show, setShow, logout }) {
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -30,9 +35,8 @@ export default function Navbar_({ login, printOnClick, show, setShow }) {
                                     login
                                         ?
                                         <>
-                                            <Button variant="success" className="fw-bold loginbtn">Admin</Button>
-                                            <Button variant="danger" className="fw-bold loginbtn"
-                                            >Logout</Button>
+                                            <Button variant="success" className="fw-bold loginbtn" onClick={() => navigate('/admin')}>Admin</Button>
+                                            <Button variant="danger" className="fw-bold loginbtn" onClick={logout} >Logout</Button>
                                         </>
                                         :
                                         <Button variant="primary" className="fw-bold loginbtn"

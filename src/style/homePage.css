@@ -6,6 +6,7 @@
 
 body {
     background-color: rgb(185, 186, 192);
+    overflow-x: hidden;
 }
 
 .fadeInAnimation {
@@ -127,7 +128,41 @@ body {
     color: white;
 }
 
-/* ------ print style ------ */
+
+
+
+
+/* ------------ adminPage ------------ */
+
+#adminPage {
+    background-color: rgb(222, 173, 146);
+    padding: 0;
+    width: 100vw;
+    max-width: 1920px;
+    height: 100vh;
+    max-height: 1080px;
+}
+
+#admin_nav {
+    background-color: rgb(216, 215, 215);
+}
+
+#admin_nav button {
+    width: 130px;
+    color: black;
+    font-weight: 600;
+}
+
+#admin_nav button:hover {
+    background-color: white;
+    border-bottom: 1px solid white;
+}
+
+
+
+
+
+/* ------------ print style ------------ */
 
 @media print {
 
