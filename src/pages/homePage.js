@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from 'react-to-print';
 import axios from "axios";
+import { SERVER_URL } from "../utilities/links.js";
 import Spinner1 from "../components/otherCompo/spinner.js";
 import Navbar1 from "../components/homePage/components/navbar.js";
 import Home from "../components/homePage/components/home.js";
@@ -31,7 +32,7 @@ export default function HomePage({ login, setLogin, logout, displayAlert }) {
     useEffect(() => {
         document.title = 'Portfolio';
         setData(null);
-        axios.get('http://localhost:4000/get/getData')
+        axios.get(`${SERVER_URL}/get/getData`)
             .then(res => {
                 if (res.status >= 200 && res.status < 300) {
                     setData(res.data.data)

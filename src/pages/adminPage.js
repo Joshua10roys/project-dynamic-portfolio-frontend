@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { SERVER_URL } from "../utilities/links.js";
 import DisplayAlert from "../components/otherCompo/alert.js";
 import Spinner1 from "../components/otherCompo/spinner.js";
 import Dashboard from "../components/adminPage/components/dashboard.js";
@@ -29,7 +30,7 @@ export default function AdminPage({ logout }) {
     const loadData = () => {
 
         setData(null);
-        axios.get('http://localhost:4000/get/getAllData', {
+        axios.get(`${SERVER_URL}/get/getAllData`, {
             headers: {
                 token: token
             }
